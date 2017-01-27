@@ -22,8 +22,8 @@ function clearContainers() {
 }
 
 function clearImages() {
-  docker rmi -f twitterstream_ingest
-  docker rmi -f twitterstream_aggregation
+  docker rmi twitterstream_ingest
+  docker rmi twitterstream_aggregation
 }
 
 dockerInstalled
