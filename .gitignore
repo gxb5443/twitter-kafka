@@ -4,4 +4,5 @@ twitterstream/target/**
 target/**
 src/**
 project/**
+!project/assembly.sbt
 .idea/**
