@@ -46,7 +46,7 @@ object AggregationApp extends App{
     .aggregateByKey(
       new WordHistogramInitializer(),
       new WordHistogramAggregator(),
-      TimeWindows.of("WORD_WINDOW", 600000L),
+      TimeWindows.of("WORD_WINDOW", 10.minutes.inMillis),
       new JSONSerde[TweetKey],
       new JSONSerde[Map[String,Int]]
     )
