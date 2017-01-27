@@ -6,6 +6,7 @@ src/**
 project/**
 !project/assembly.sbt
 .idea/**
-docker/**
-!docker/ingest/Dockerfile
-!docker/aggregation/Dockerfile
+docker/aggregation/application.conf
+docker/ingest/application.conf
+docker/aggregation/twitterstream.jar
+docker/ingest/twitterstream.jar
