@@ -1,0 +1,7 @@
+.DS_Store
+application.conf
+twitterstream/target/**
+target/**
+src/**
+project/**
+.idea/**
