@@ -6,3 +6,6 @@ src/**
 project/**
 !project/assembly.sbt
 .idea/**
+docker/**
+!docker/ingest/Dockerfile
+!docker/aggregation/Dockerfile
