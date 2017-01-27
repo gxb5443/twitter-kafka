@@ -1,0 +1,16 @@
+kafka {
+  brokers = "kafka:9092"
+  zookeepers = "zookeeper:2181"
+  raw_topic = "tweets"
+  aggregation_topic = "aggregation"
+  state_dir = "/tmp"
+  partition = 0
+}
+
+twitter {
+  consumer_key = ""
+  consumer_secret = ""
+  token = ""
+  token_secret = ""
+  terms = ["#someHashtag", "someWord"]
+}
