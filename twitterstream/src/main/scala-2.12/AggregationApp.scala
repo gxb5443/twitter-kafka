@@ -43,6 +43,7 @@ object AggregationApp extends App{
           .split(" ")
           .map { word => word.trim }
     })
+    /*
     .aggregateByKey(
       new WordHistogramInitializer(),
       new WordHistogramAggregator(),
@@ -50,16 +51,15 @@ object AggregationApp extends App{
       new JSONSerde[TweetKey],
       new JSONSerde[Map[String,Int]]
     )
-    /*
+    */
     .groupByKey()
     .aggregate(
       new WordHistogramInitializer(),
       new WordHistogramAggregator(),
       TimeWindows.of(10.minutes.inMillis),
-      new JSONSerde[Map[String,Int]],
+      new JSONSerde[Map[String, Int]],
       "TestStore"
     )
-    */
     .toStream
     .map {
       new KeyValueMapper[Windowed[TweetKey], Map[String, Int], KeyValue[TweetKey, WindowedHistogram]] {
